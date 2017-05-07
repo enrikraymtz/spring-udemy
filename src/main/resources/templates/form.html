@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>formulario</title>
+</head>
+<body>
+	<form action="#" th:action="@{/ejemplo3/addperson}" th:object="${persona}" method="POST" >
+		<p>Nombre: <input type="text" th:field="*{name}" /></p>
+		<p th:if="${#fields.hasErrors('name')}" th:errors="*{name}">Error en nombre</p>
+		<p>Edad: <input type="number" th:field="*{age}" /></p>
+		<p th:if="${#fields.hasErrors('age')}" th:errors="*{age}">Error en edad</p>
+		<p><input type="submit" value="enviar" /></p>
+	</form>
+</body>
+</html>

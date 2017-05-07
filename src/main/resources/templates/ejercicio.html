@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8" />
+<title>Prueba de ejercicio</title>
+</head>
+<body>
+	<table>
+		<thead>
+			<tr>
+				<th>ID</th>
+				<th>Mensaje</th>
+			</tr>
+		</thead>
+		<tbody th:each="msj : ${mensajes}">
+			<tr>
+				<td th:text="${msj.id}"></td>
+				<td th:text="${msj.msj}"></td>
+			</tr>
+		</tbody>
+	</table>
+</body>
+</html>
